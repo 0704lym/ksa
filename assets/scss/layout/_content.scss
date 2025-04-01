@@ -1,0 +1,61 @@
+@use '../utils/mixin' as *;
+
+.pc {
+  display: none;
+
+  @media (min-width:768px){
+    display: block;
+  }
+}
+
+.mo {
+  display: block;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.main {
+  position: relative;
+  .sector {
+    &-visual {
+      position: relative;
+      width: 100%;
+      height: 170px;
+      @include bgImg(100%, 170px,'main_bg.png');
+
+      .visual-title {
+        position: absolute;
+        top: 40px;
+        left: 20px;
+        @include fontStyle(18px, 150%, 700);
+        color:white;
+        text-align: left;
+
+        @media(min-width:1024px) {
+          top: 65px;
+          left: 50%;
+          transform: translateX(-50%);
+          text-align: center;
+        }
+      }
+    }
+
+    &-content {
+      background-color: #D7D7D7;
+
+      .cont-area {
+        position: relative;
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        top: -36px;
+
+        @media (min-width:1024px) {
+          max-width: calc(100% - 314px);
+          top: -98px;
+        }
+      }
+    }
+  }
+}
