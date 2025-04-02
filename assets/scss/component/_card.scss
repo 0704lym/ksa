@@ -1,0 +1,118 @@
+@use "../utils/mixin" as *;
+@use "../variables/color" as *;
+
+.card-box {
+  position: relative;
+  width: 100%;
+  padding: 20px 20px 30px 20px;
+  border-top: 3px solid $green;
+  border-radius: 4px;
+  .sub-title {
+    @include fontStyle(15px, 100%, 500);
+    color: $gray;
+  }
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+
+    .title-area {
+      .main-title {
+        @include fontStyle(22px, 100%, 700);
+        color: $black;
+      }
+    }
+    .more-btn {
+      display: inline-block;
+      font-size: 0;
+      @include bgImg(36px, 36px, "icon_arrow_bottom.svg");
+
+      &.on {
+        transform: rotate(180deg);
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  .cont {
+    padding: 16px 0;
+    @include fontStyle(16px, 140%, 500);
+    color: $black;
+    border-bottom: 1px solid #eee;
+
+    a {
+      margin-top: 10px;
+    }
+
+    &-middle-title {
+      margin-top: 5px;
+      font-weight: 700;
+    }
+  }
+
+  .notice {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    text-align: center;
+    background-color: $yellow;
+
+    p {
+      @include fontStyle(14px, 140%, 600);
+    }
+  }
+
+  &.download {
+    .title-area {
+      position: relative;
+      padding-left: 36px;
+
+      .main-title {
+        @include fontStyle(22px, 100%, 700);
+        color: $black;
+      }
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-55%);
+        left: 0;
+        @include bgImg(28px, 28px, "icon_download.svg");
+      }
+
+      @media (min-width: 768px) {
+        display: flex;
+        align-items: end;
+        gap: 10px;
+      }
+    }
+
+    .cont {
+      &.download {
+        position: relative;
+        padding-left: 36px;
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-55%);
+          left: 0;
+          @include bgImg(28px, 28px, "icon_download.svg");
+        }
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+          @include bgImg(28px, 28px, "icon_arrow_right.svg");
+        }
+      }
+    }
+  }
+}
+

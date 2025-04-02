@@ -1,0 +1,69 @@
+@use "../utils/mixin" as *;
+@use "../variables/color" as *;
+
+.check-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  input {
+    background-color: transparent;
+    box-sizing: border-box;
+    border-radius: 4px;
+    + label {
+      @include fontStyle(16px, 140%, 700);
+    }
+  }
+  input[type="checkbox"]:checked {
+    position: relative;
+    + label {
+      @include fontStyle(16px, 140%, 400);
+      color: $white;
+    }
+    &:after {
+      content: "";
+      @include bgImg(16px, 16px, "icon_check_on.svg");
+      background-color: $black;
+      border-radius: 4px;
+      display: block;
+      position: absolute;
+      right: -2px;
+      top: -2px;
+      cursor: pointer;
+      z-index: 2;
+    }
+  }
+}
+
+.input-wrap {
+  position: relative;
+  input[type="text"] {
+    width: 100%;
+    height: 72px;
+    padding: 41px 20px 12px;
+    background-color: #efefef;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: none;
+    @include fontStyle(16px, 100%, 400);
+    color: #222;  
+
+    &:placeholder {
+      color: #d3d3d3;
+    }
+
+  }
+  label {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    z-index: 2;
+    @include fontStyle(16px, 100%, 400);
+    color: #111;
+  }
+
+  &.error {
+    input[type="text"] {
+      border: 2px solid $alert;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 @use '../utils/mixin' as *;
+@use '../variables/color' as *;
 
 .pc {
   display: none;
@@ -57,5 +58,6 @@
         }
       }
     }
+
   }
 }

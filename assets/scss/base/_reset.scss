@@ -1,37 +1,258 @@
-// 기본 리셋
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@use '../utils/mixin' as *;
+@use '../variables/color' as *;
 
-// 기본 글꼴 및 반응형 설정
-html {
-  font-size: 16px;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  scroll-behavior: smooth;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-style: normal;
+    font-family: Pretendard, "맑은고딕", Arial, sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    -ms-text-size-adjust: none; /* IE */
+    -moz-text-size-adjust: none; /* 파이어폭스 */
+    -o-text-size-adjust: none; /* 오페라 구버전 */
+    -webkit-appearance: none;
+    -webkit-overflow-scrolling: auto;
+    box-sizing: border-box;
+}
+hr{
+    margin:0;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 body {
-  font-family: 'Noto Sans KR', sans-serif;
-  color: #333;
-  background-color: #fff;
-  line-height: 1.5;
+    line-height: 1;
+    -ms-overflow-style: none;
 }
 
-// 이미지, 링크 기본 스타일
-img {
-  max-width: 100%;
-  height: auto;
+ol,
+ul,
+li {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    padding: 0;
+    border: 0;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+th,
+td {
+    padding: 0;
+}
+table caption {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="text"], textarea{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
 }
 
-// 리스트 스타일 제거
-ul, ol {
-  list-style: none;
+// 체크박스 및 라디오 버튼 초기화
+input[type="checkbox"],
+input[type="radio"] {
+    margin: 0;
+    padding: 0;
+    border: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background-color: $white;
+    border: 2px solid $white;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
 }
+
+
+// textarea 기본 스타일 초기화
+textarea {
+margin: 0;
+padding: 12px; 
+font-family: inherit;  
+font-size: 14px;
+color: inherit;        
+background-color: $white; 
+   
+border-radius: 8px;    
+outline: none;          
+box-sizing: border-box; 
+line-height: 19.6px;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+}
+
+textarea::placeholder{
+font-size: 14px;
+}
+
+// 포커스 상태 스타일
+// textarea:focus {
+
+// }
+
+// 텍스트 입력 외에도 일반적으로 사용되는 스타일
+textarea[type="text"],
+textarea[type="password"],
+textarea[type="email"],
+textarea[type="search"] {
+width: 100%; 
+}
+
+
+
+// select 기본 스타일 초기화
+select {
+margin: 0;
+padding: 12px; 
+font-family: inherit; 
+font-size: 14px;
+background-color: $white;
+
+border-radius: 8px;
+outline: none;      
+box-sizing: border-box;  
+line-height: 19.6px;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+position: relative;
+width: 100%;
+font-family: inherit;
+background: #fff url(/assets/image/ico-arrow-bottom.svg) no-repeat 90% 50% !important;
+background-size: 16px 16px !important;
+}
+
+option{
+font-size: 14px;
+}
+select::placeholder{
+font-size: 14px;
+
+}
+
+/* 기본 placeholder 스타일 */
+select option[value=""][disabled][selected] {
+background-color: #f5f5f5; 
+}
+
+
+select option {
+background-color: $white; 
+}
+
+/* 선택된 옵션 스타일 */
+select:focus option:checked {
+color: #3498db; 
+background-color: #ecf0f1;
+}
+
+
+
+
+

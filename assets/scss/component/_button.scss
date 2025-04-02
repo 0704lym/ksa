@@ -1,0 +1,44 @@
+@use '../utils/mixin' as *;
+@use '../variables/color' as *;
+
+.btn {
+  display: inline-block;
+  width: 100%;
+
+  &.default {
+    background-color: $green10;
+    padding: 10px 0;
+    border-radius: 10px;
+    @include fontStyle(14px, 100%, 500);
+    color:$green;
+    text-align: center;
+    border: 1px solid transparent;
+    &:hover {
+      border:1px solid $green;
+    }
+  }
+
+  &.consult {
+    padding: 21px 0;
+    background-color: $green;
+    border-radius: 30px;
+  
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      @include fontStyle(20px, 100%, 700);
+      color:$white;
+      &:after{
+        content: '';
+        display: block;
+        @include bgImg(24px,24px ,'icon_consult.svg');
+      }
+    }
+
+    &:hover {
+      background-color: $green-hover;
+    }
+  }
+}
