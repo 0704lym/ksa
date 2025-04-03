@@ -5,40 +5,41 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  input {
+ 
+  input[type="checkbox"]{
     background-color: transparent;
-    box-sizing: border-box;
-    border-radius: 4px;
-    + label {
-      @include fontStyle(16px, 140%, 700);
-    }
-  }
-  input[type="checkbox"]:checked {
     position: relative;
     + label {
       @include fontStyle(16px, 140%, 400);
       color: $white;
     }
-    &:after {
-      content: "";
-      @include bgImg(16px, 16px, "icon_check_on.svg");
-      background-color: $black;
-      border-radius: 4px;
-      display: block;
-      position: absolute;
-      right: -2px;
-      top: -2px;
-      cursor: pointer;
-      z-index: 2;
+
+
+  
+    &:checked{
+      &:after {
+        content: "";
+        @include bgImg(16px, 16px, "icon_check_on.svg");
+        background-color: $black;
+        border-radius: 4px;
+        display: block;
+        position: absolute;
+        right: -2px;
+        top: -2px;
+        cursor: pointer;
+        z-index: 2;
+      }
     }
   }
+
+  
 }
 
 .input-wrap {
   position: relative;
-  input[type="text"] {
+
+  input[type="text"], textarea {
     width: 100%;
-    height: 72px;
     padding: 41px 20px 12px;
     background-color: #efefef;
     border-radius: 8px;
@@ -50,7 +51,18 @@
     &:placeholder {
       color: #d3d3d3;
     }
+    + label {
+      @include fontStyle(16px, 140%, 700);
+    }
 
+  }
+
+  input[type="text"] {
+    height: 74px;
+  }
+
+  textarea {
+    height: 186px;
   }
   label {
     position: absolute;

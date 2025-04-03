@@ -19,22 +19,311 @@
   <!-- 파비콘 설정 -->
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-
-  <!-- CSS 초기화 -->
-  <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/main.css">
 
-  <!-- 최신 브라우저에서만 실행 -->
-  <script>
-    document.documentElement.classList.remove('no-js');
-  </script>
+  <script src="/assets/js/lib/jquery-2.2.4.min.js"></script>
+  <script src="/assets/js/lib/jquery-ui.js"></script>
+  <script src="/assets/js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
 </head>
 <body>
   <header>
-    <h1>웹 표준 퍼블리싱</h1>
+    <h1><a href="#"><img src="/assets/images/logo.svg" alt="한국표준협회">한국표준협회</a></h1>
   </header>
   <main>
-    <p>이곳에 내용을 입력하세요.</p>
+    <div class="sector-visual">
+      <p class="visual-title mo">Promising Way to Sustainable Safety<br>
+        Excellence with KSA</p>
+      <p class="visual-title pc">
+        Promising Way to Sustainable Safety Excellence with KSA<br>
+        손에 잡히는 안전보건관리체계, 현장에서 작동하는 안전활동 KSA가 함께 만들어 갑니다.
+      </p>
+    </div>
+    <div class="sector-content">
+      <div class="inner">
+       <div class="card-area">
+        <div class="card-box mo">
+          <div class="title">
+            <div class="title-area">
+              <p class="main-title">관리 감독자/역량 교육</p>
+            </div>
+            <a href="" class="more-btn mo">more</a>
+          </div>
+          <div class="cont-area">
+            <div class="cont">
+              <p class="cont-title">[ZOOM] 관리감독자 교육 (제조 및 기타업종)</p>
+              <a href="" class="btn default">교육신청 바로가기</a>
+            </div>
+            <div class="cont">
+              <p class="cont-title">관리감독자 교육 (제조 및 기타업종)</p>
+              <a href="" class="btn default">교육신청 바로가기</a>
+            </div>
+            <div class="cont">
+              <p class="cont-title">관리감독자 교육 (건설업)</p>
+              <a href="" class="btn default">교육신청 바로가기</a>
+            </div>
+            <div class="cont">
+              <p class="cont-title">산업안전 일반과정</p>
+              <a href="" class="btn default">교육신청 바로가기</a>
+            </div>
+            <div class="cont">
+              <p class="cont-title">화학물질/화공안전 과정</p>
+              <a href="" class="btn default">교육신청 바로가기</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-group pc">
+          <div class="card-box">
+            <div class="title">
+              <div class="title-area">
+                <p class="main-title">관리 감독자/역량 교육</p>
+              </div>
+            </div>
+            <div class="cont-area">
+              <div class="cont">
+                <p class="cont-title">[ZOOM] 관리감독자 교육 (제조 및 기타업종)</p>
+                <a href="" class="btn default">교육신청 바로가기</a>
+              </div>
+              <div class="cont">
+                <p class="cont-title">관리감독자 교육 (제조 및 기타업종)</p>
+                <a href="" class="btn default">교육신청 바로가기</a>
+              </div>
+              <div class="cont">
+                <p class="cont-title">관리감독자 교육 (건설업)</p>
+                <a href="" class="btn default">교육신청 바로가기</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-box">
+            <div class="title">
+              <div class="title-area">
+                <p class="main-title">산업안전 일반과정</p>
+              </div>
+            </div>
+            <div class="cont-area">
+              <div class="cont">
+                <a href="" class="btn default">교육신청 바로가기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-box">
+          <div class="title">
+            <div class="title-area">
+              <p class="main-title">맞춤형 사내교육</p>
+            <span class="sub-title">고객사 절차 및 양식 기반</span>
+            </div>
+            <a href="" class="more-btn mo">more</a>
+          </div>
+          <div class="cont-area">
+            <div class="cont">
+              <p class="cont-title">
+                중대법 대응 안전보건관리체계<br>
+                수립 및 운영실무
+              </p>
+            </div>
+            <div class="cont">
+              <p class="cont-title">
+                위험성평가 기반 자기규율 예방체계<br>
+                수립 및 운영 실무</p>
+            </div>
+            <div class="cont">
+              <p class="cont-title">작업허가 및 안전작업계획 수립 실무</p>
+            </div>
+            <div class="cont">
+              <p class="cont-title">작업 위험성평가(JSA) 실행 역량강화</p>
+            </div>
+            <div class="cont">
+              <p class="cont-title">고위험작업(고소/밀폐/줄걸이/중장비/LOTO)<br>
+                안전관리 Skill-up 과정</p>
+            </div>
+            <div class="cont">
+              <p class="cont-title">공정안전관리(PSM) 실무/자체감사 역량강화</p>
+            </div>
+            <div class="cont">
+              <p class="cont-title">안전문화수준 향상을 위한 리더십 역량강화</p>
+            </div>
+            
+            <div class="notice">
+              <p>※ 상기 주제를 바탕으로 맞춤형 법정<br>관리감독자 과정(8h/16h) 운영 가능</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-box">
+          <div class="title">
+            <div class="title-area">
+              <p class="main-title">현장 OJT 및 솔루션 제공</p>
+            </div>
+            <a href="" class="more-btn mo">more</a>
+          </div>
+          <div class="cont-area">
+            <div class="cont">
+              <p class="cont-title">중대법 대응 안전보건관리체계 구축</p>
+            </div>
+            <div class="cont">
+              <p class="cont-title">중대법 안전보건확보 의무 이행점검</p>
+            </div>
+            <div class="cont">
+              <p class="cont-title">도급/건설발주 표준안전관리체계 수립</p>
+            </div>
+            <div class="cont">
+              <p class="cont-title">협력기업 사고예방 협력체계 구축</p>
+            </div>
+            <div class="cont">
+              <p class="cont-title">전사 직급/직무 맟춤 안전보건교육훈련<br>체계 수립 및 교과정개발</p>
+            </div>
+            <div class="cont">
+              <p class="cont-title">고위험작업 안전관리 기업 맞춤형<br>교육 컨텐츠(특별안전보건교육) 개발</p>
+            </div>
+            <div class="cont">
+              <p class="cont-title">안전문화수준 측정 및 개선<br>(안전문화증진시스템 구축)</p>
+            </div>
+          </div>
+        </div>
+        <div class="inquiry-box pc">
+          <div class="title">
+            교육/현장지도 기업상담문의
+          </div>
+          <div class="input-box">
+            <div class="input-wrap">
+              <input type="text" name="" id="text_1" placeholder="입력하세요">
+              <label for="text_1">상호명</label>
+            </div>
+            <div class="input-wrap">
+              <input type="text" name="" id="text_1" placeholder="입력하세요">
+              <label for="text_1">직원수</label>
+            </div>
+            <div class="input-wrap">
+              <input type="text" name="" id="text_1" placeholder="입력하세요">
+              <label for="text_1">담당자</label>
+            </div>
+            <div class="input-wrap">
+              <input type="text" name="" id="text_1" placeholder="입력하세요">
+              <label for="text_1">얀락처</label>
+            </div>
+            <div class="input-wrap">
+              <textarea name="" id="" placeholder="입력하세요"></textarea>
+              <label for="text_1">input</label>
+            </div>
+            <div class="agree-area">
+              <div class="check-box">
+                <input type="checkbox" name="" id="check">
+                <label for="check">개인정보 취급방침</label>
+              </div>
+              <div class="button-box">
+                <a href="" class="btn agree-popup">자세히 보기</a>
+              </div>
+            </div>
+            <div class="button-box">
+              <a href="#" class="btn consult">
+                <span>btn-consult</span>
+              </a>
+            </div>
+          </div>
+          <div class="text-box">
+            <span>전화 상담문의</span>
+            <p>
+              02-6240-5685</p>
+          </div>
+        </div>
+        <div class="card-box pc">
+          <div class="title">
+            <div class="title-area">
+              <p class="main-title">화학물질/화공안전 과정</p>
+            </div>
+          </div>
+          <div class="cont-area">
+            <div class="cont">
+              <a href="" class="btn default">교육신청 바로가기</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-box mo">
+          <div class="title">
+            <div class="title-area">
+              <p class="main-title">공공기관 안전활동 수준향상</p>
+            </div>
+            <a href="" class="more-btn mo">more</a>
+          </div>
+          <div class="cont-area">
+            <div class="cont">
+              <p class="cont-title">안전관리등급제/안전활동수준평가<br>담당자 역량강화</p>
+            </div>
+            <div class="cont">
+              <p class="cont-title">위험성평가 타당성검토 및 이행점검<br>(협력기업 포함)</p>
+            </div>
+            <div class="cont">
+              <p class="cont-title">협력기업 안전활동수준평가 및 개선</p>
+            </div>
+            <div class="cont">
+              <p class="cont-title">공공기관 안전평가 대응 및 수준향상 지도</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-box">
+          <div class="title">
+            <div class="title-area">
+              <p class="main-title">산업안전 해외연수</p>
+            </div>
+            <a href="" class="more-btn mo">more</a>
+          </div>
+          <div class="cont-area">
+            <div class="cont">
+              <p class="sub-title">
+                <span>독일-프랑스</span>
+                <span>11월 1일~8일, 6박 8일</span>
+              </p>
+              <p class="cont-middle-title">중대재해 예방을 위한 스마트 안전기술 벤치마킹</p>
+              <a href="#" class="btn default">연수과정 바로가기</a>
+            </div>
+            <div class="cont">
+              <p class="sub-title">
+                <span>영국</span>
+                <span>10월 25일~11월 1일, 6박 8일</span>
+              </p>
+              <p class="cont-middle-title">자기규율예방체계 확립을 위한 선진기업 벤치마킹</p>
+              <a href="#" class="btn default">연수과정 바로가기</a>
+            </div>
+            <div class="cont">
+              <p class="sub-title">
+                <span>일본</span>
+                <span>9월 23일~26일, 3박 4일</span>
+              </p>
+              <p class="cont-middle-title">중대재해 예방을 위한 선진 안전문화 벤치마킹</p>
+              <a href="#" class="btn default">연수과정 바로가기</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-box pc">
+          <div class="title">
+            <div class="title-area">
+              <p class="main-title">공공기관 안전활동 수준향상</p>
+            </div>
+            <a href="" class="more-btn mo">more</a>
+          </div>
+          <div class="cont-area">
+            <div class="cont">
+              <p class="cont-title">안전관리등급제/안전활동수준평가<br>담당자 역량강화</p>
+            </div>
+            <div class="cont">
+              <p class="cont-title">위험성평가 타당성검토 및 이행점검<br>(협력기업 포함)</p>
+            </div>
+            <div class="cont">
+              <p class="cont-title">협력기업 안전활동수준평가 및 개선</p>
+            </div>
+            <div class="cont">
+              <p class="cont-title">공공기관 안전평가 대응 및 수준향상 지도</p>
+            </div>
+          </div>
+        </div>
+       </div>
+        <div class="button-box mo">
+          <a href="#" class="btn consult">
+            <span>문의하기</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </main>
   <footer>
     <p>ⓒ 2025 Your Company</p>

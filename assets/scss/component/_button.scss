@@ -9,7 +9,7 @@
     background-color: $green10;
     padding: 10px 0;
     border-radius: 10px;
-    @include fontStyle(14px, 100%, 500);
+    @include fontStyle(15px, 100%, 500);
     color:$green;
     text-align: center;
     border: 1px solid transparent;
@@ -40,5 +40,18 @@
     &:hover {
       background-color: $green-hover;
     }
+  }
+
+  &.agree-popup {
+    width: 77px;
+    display: inline-block;
+    border-radius: 4px;
+    border:1px solid $white;
+    background-color: transparent;
+    padding: 4px 0;
+    text-align: center;
+    @include fontStyle(14px, 100%, 400);
+    color:$white;
+
   }
 }

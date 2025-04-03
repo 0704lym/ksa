@@ -1,124 +1,155 @@
 @use "../utils/mixin" as *;
 @use "../variables/color" as *;
 
-.card-box {
-  position: relative;
-  width: 100%;
-  padding: 20px 20px 30px 20px;
-  border-top: 3px solid $green;
-  border-radius: 4px;
-  .sub-title {
-    @include fontStyle(15px, 100%, 500);
-    color: $gray;
-  }
-  .title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 20px;
+.card-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    .title-area {
-      .main-title {
-        @include fontStyle(22px, 100%, 700);
-        color: $black;
-      }
-    }
-    .more-btn {
-      display: inline-block;
-      font-size: 0;
-      transition: all 0.3s;
-      @include bgImg(36px, 36px, "icon_arrow_bottom.svg");
-
-      &.on {
-        transform: rotate(180deg);
-        transition: all 0.3s;
-      }
-
-
-    @media (min-width:1024px) {
-     display: none;
-    }
-    }
+  @media (min-width:768px) {
+    display: inline-flex;
+    align-items: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:inherit;
+    gap: 20px;
   }
 
-  .cont-area {
-    opacity: 0;
-    height: 0;
-    transition: all 0.3s;
+  .card-group {
+    width: calc((100% - 60px)/4);
 
-    &.on {
-      opacity: 1;
-      height: auto;
-      transition: all 0.3s;
-    }
-
-    @media (min-width:1024px) {
-      height: auto;
-      opacity: 1;
+    .card-box {
+      width: 100%;
     }
   }
-
-  .cont {
-    padding: 16px 0;
-    @include fontStyle(16px, 140%, 500);
-    color: $black;
-    border-bottom: 1px solid #eee;
-
-    a {
-      margin-top: 10px;
-    }
-
-    &-middle-title {
-      margin-top: 5px;
-      font-weight: 700;
-    }
-  }
-
-  .notice {
+  .card-box {
+    position: relative;
     width: 100%;
-    margin-top: 10px;
-    padding: 12px;
-    text-align: center;
-    background-color: $yellow;
+    height: auto;
+    padding: 21px 20px;
+    border-top: 3px solid $green;
+    border-radius: 4px;
+    background-color: #fff;
+    box-sizing: border-boxs;
+    margin-bottom: 12px;
 
-    p {
-      @include fontStyle(14px, 140%, 600);
+    @media (min-width:1024px) {
+      width: calc((100% - 60px)/4);
     }
-  }
-
-  &.download {
-    .title{
-      position: relative;
-      .title-area {
-        padding-left: 36px;
+    
+    .sub-title {
+      @include fontStyle(15px, 100%, 500);
+      color: $gray;
+    }
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
   
+      .title-area {
         .main-title {
           @include fontStyle(22px, 100%, 700);
           color: $black;
-        }
-     
-  
-        @media (min-width: 768px) {
-          display: flex;
-          align-items: end;
-          gap: 10px;
+          margin-bottom: 4px;
         }
       }
-      .icon-download{
+      .more-btn {
+        display: inline-block;
         font-size: 0;
-        display: block;
-        position: absolute;
-        top: 4px;
-        left: 0;
-        @include bgImg(28px, 28px, "icon_download.svg");
+        transition: all 0.3s;
+        @include bgImg(36px, 36px, "icon_arrow_bottom.svg");
+  
+        &.on {
+          transform: rotate(180deg);
+          transition: all 0.3s;
+        }
+  
+  
+      @media (min-width:1024px) {
+       display: none;
+      }
       }
     }
-
+  
+    .cont-area {
+      opacity: 0;
+      height: 0;
+      transition: all 0.3s;
+  
+      &.on {
+        opacity: 1;
+        height: auto;
+        transition: all 0.3s;
+      }
+  
+      @media (min-width:1024px) {
+        height: auto;
+        opacity: 1;
+      }
+    }
+  
     .cont {
-      &.download {
+      padding: 16px 0;
+      @include fontStyle(16px, 140%, 500);
+      color: $black;
+      border-bottom: 1px solid #eee;
+  
+      a {
+        margin-top: 10px;
+      }
+      .sub-title {
+        display: inline-flex;
+        align-items: center;
+  
+        span{
+          &:first-child{
+            &:after {
+              content: '|';
+              display: inline-block;
+              font-size: 14px;
+              color: $gray;
+              margin: 0 5px;
+            }
+          }
+        }
+      }
+      &-middle-title {
+        margin-top: 5px;
+        font-weight: 700;
+      }
+    }
+  
+    .notice {
+      width: 100%;
+      margin-top: 10px;
+      padding: 12px;
+      text-align: center;
+      background-color: $yellow;
+  
+      p {
+        @include fontStyle(14px, 140%, 600);
+      }
+    }
+  
+    &.download {
+      .title{
         position: relative;
-        padding-left: 36px;
-        .icon-download {
+        .title-area {
+          padding-left: 36px;
+    
+          .main-title {
+            @include fontStyle(22px, 100%, 700);
+            color: $black;
+          }
+       
+    
+          @media (min-width: 768px) {
+            display: flex;
+            align-items: end;
+            gap: 10px;
+          }
+        }
+        .icon-download{
           font-size: 0;
           display: block;
           position: absolute;
@@ -126,14 +157,91 @@
           left: 0;
           @include bgImg(28px, 28px, "icon_download.svg");
         }
-        .icon-viewer {
-          font-size: 0;
-          display: block;
-          position: absolute;
-          top: 4px;
-          right: 0;
-          @include bgImg(28px, 28px, "icon_arrow_right.svg");
+      }
+  
+      .cont {
+        &.download {
+          position: relative;
+          padding-left: 36px;
+          .icon-download {
+            font-size: 0;
+            display: block;
+            position: absolute;
+            top: 4px;
+            left: 0;
+            @include bgImg(28px, 28px, "icon_download.svg");
+          }
+          .icon-viewer {
+            font-size: 0;
+            display: block;
+            position: absolute;
+            top: 4px;
+            right: 0;
+            @include bgImg(28px, 28px, "icon_arrow_right.svg");
+          }
         }
+      }
+    }
+  }
+
+  .inquiry-box {
+    width: calc((100% - 60px)/4);
+    background-color: #000;
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 37px 20px 21px;
+      @include fontStyle(22px, 100%,700);
+      color:$white;
+
+      &:before {
+        content: '';
+        display: block;
+        @include bgImg(24px,24px ,'icon_consult.svg');
+      }
+    }
+
+    .input-box {
+      padding: 20px 20px 0 20px;
+
+      .input-wrap {
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 30px;
+        }
+      }
+      .agree-area {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        .button-box{
+          margin-top: 0;
+        }
+      }
+
+      .button-box {
+        margin: 28px 0;
+      }
+    }
+
+    .text-box {
+      width: 100%;
+      background: #FFC800;
+      padding: 10px 0 20px;
+      text-align: center;
+
+      span {
+        @include fontStyle(16px,100%,500);
+        color:#000;
+      }
+
+      p {
+        @include fontStyle(24px,100%,700);
+        color:#000;
       }
     }
   }

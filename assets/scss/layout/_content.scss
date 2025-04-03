@@ -4,7 +4,7 @@
 .pc {
   display: none;
 
-  @media (min-width:768px){
+  @media (min-width:1024px){
     display: block;
   }
 }
@@ -12,12 +12,12 @@
 .mo {
   display: block;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     display: none;
   }
 }
 
-.main {
+main {
   position: relative;
   .sector {
     &-visual {
@@ -34,30 +34,38 @@
         color:white;
         text-align: left;
 
-        @media(min-width:1024px) {
+       
+      }
+      @media(min-width:1024px) {
+        height: 344px;
+        .visual-title {
           top: 65px;
-          left: 50%;
-          transform: translateX(-50%);
-          text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
         }
       }
     }
 
     &-content {
       background-color: #D7D7D7;
-
-      .cont-area {
+      padding-bottom: 86px;
+      .inner {
         position: relative;
         width: calc(100% - 40px);
+        // height: calc(100vh - 401px);
         margin: 0 auto;
         top: -36px;
 
         @media (min-width:1024px) {
-          max-width: calc(100% - 314px);
           top: -98px;
         }
 
-     
+      .button-box {
+        margin-top: 50px;
+      }
+
+   
       }
     }
 

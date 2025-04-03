@@ -52,7 +52,7 @@
   <header>
     <h1 style="width: 100%;">컴포넌트 가이드</h1>
   </header>
-  <div class="main">
+  <main>
     <div class="sector-group">
       <h2>Layout</h2>
       <div class="item">
@@ -77,7 +77,7 @@
         <div class="item-feature">
           <h4 style="margin-bottom: 100px">content</h4>
           <div class="sector-content" style="height: 500px;">
-            <div class="cont-area" style="background-color: #ccc; height: 500px;">내용</div>
+            <div class="inner" style="background-color: #ccc; height: 500px;">내용</div>
           </div>
         </div>
         <div class="item-feature">
@@ -96,7 +96,10 @@
                   <p class="cont-title">cont-title</p>
                 </div>
                 <div class="cont">
-                  <span class="sub-title">sub-title</span>
+                  <p class="sub-title">
+                    <span>sub-title</span>
+                    <span>sub-title</span>
+                  </p>
                   <p class="cont-middle-title">cont-title</p>
                   <a href="#" class="btn default">link-button</a>
                 </div>
@@ -129,7 +132,10 @@
                   <a class="icon-viewer" data-url="http://127.0.0.1:5500/assets/pdf/pdf_ex.pdf">PDF보기</a>
                 </div>
                 <div class="cont">
-                  <span class="sub-title">sub-title</span>
+                  <p class="sub-title">
+                    <span>sub-title</span>
+                    <span>sub-title</span>
+                  </p>
                   <p class="cont-middle-title">cont-title</p>
                   <a href="#" class="btn default">link-button</a>
                 </div>
@@ -162,7 +168,7 @@
         <div class="item-feature" style="padding:0 20px; width: 388px; background-color: rgba(0,0,0,.5);">
           <div class="check-box">
             <input type="checkbox" name="" id="check">
-            <label for="check">체크체크</label>
+            <label for="check">개인정보 취급방침</label>
           </div>
         </div>
         <h3>-input</h3>
@@ -173,6 +179,10 @@
           </div>
           <div class="input-wrap error" style="margin-top: 20px;">
             <input type="text" name="" id="text_1" placeholder="입력하세요">
+            <label for="text_1">input</label>
+          </div>
+          <div class="input-wrap">
+            <textarea name="" id="" placeholder="입력하세요"></textarea>
             <label for="text_1">input</label>
           </div>
         </div>
