@@ -25,14 +25,13 @@ function pdfViewer() {
 function pdfViewer2(){
   var pdfDoc = null,
         pageNum = 1,
-        scale = 1.5,
+        scale = 2,
         canvas = document.getElementById("pdf-canvas"),
         ctx = canvas.getContext("2d");
 
     // 모달 요소
     var modal = document.getElementById("pdf-modal");
     var closeBtn = document.querySelector(".close");
-
     $(".icon-viewer").on("click", function () {
         var pdfUrl = $(this).data("url");
         if (pdfUrl) {
