@@ -26,12 +26,35 @@
     .more-btn {
       display: inline-block;
       font-size: 0;
+      transition: all 0.3s;
       @include bgImg(36px, 36px, "icon_arrow_bottom.svg");
 
       &.on {
         transform: rotate(180deg);
         transition: all 0.3s;
       }
+
+
+    @media (min-width:1024px) {
+     display: none;
+    }
+    }
+  }
+
+  .cont-area {
+    opacity: 0;
+    height: 0;
+    transition: all 0.3s;
+
+    &.on {
+      opacity: 1;
+      height: auto;
+      transition: all 0.3s;
+    }
+
+    @media (min-width:1024px) {
+      height: auto;
+      opacity: 1;
     }
   }
 
@@ -64,28 +87,30 @@
   }
 
   &.download {
-    .title-area {
+    .title{
       position: relative;
-      padding-left: 36px;
-
-      .main-title {
-        @include fontStyle(22px, 100%, 700);
-        color: $black;
+      .title-area {
+        padding-left: 36px;
+  
+        .main-title {
+          @include fontStyle(22px, 100%, 700);
+          color: $black;
+        }
+     
+  
+        @media (min-width: 768px) {
+          display: flex;
+          align-items: end;
+          gap: 10px;
+        }
       }
-      &:before {
-        content: "";
+      .icon-download{
+        font-size: 0;
         display: block;
         position: absolute;
-        top: 50%;
-        transform: translateY(-55%);
+        top: 4px;
         left: 0;
         @include bgImg(28px, 28px, "icon_download.svg");
-      }
-
-      @media (min-width: 768px) {
-        display: flex;
-        align-items: end;
-        gap: 10px;
       }
     }
 
@@ -93,21 +118,19 @@
       &.download {
         position: relative;
         padding-left: 36px;
-        &:before {
-          content: "";
+        .icon-download {
+          font-size: 0;
           display: block;
           position: absolute;
-          top: 50%;
-          transform: translateY(-55%);
+          top: 4px;
           left: 0;
           @include bgImg(28px, 28px, "icon_download.svg");
         }
-        &:after {
-          content: "";
+        .icon-viewer {
+          font-size: 0;
           display: block;
           position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
+          top: 4px;
           right: 0;
           @include bgImg(28px, 28px, "icon_arrow_right.svg");
         }

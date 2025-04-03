@@ -360,6 +360,7 @@ select:focus option:checked {
 .card-box .title .more-btn {
   display: inline-block;
   font-size: 0;
+  transition: all 0.3s;
   width: 36px;
   height: 36px;
   background-image: url("/assets/images/icon_arrow_bottom.svg");
@@ -370,6 +371,27 @@ select:focus option:checked {
 .card-box .title .more-btn.on {
   transform: rotate(180deg);
   transition: all 0.3s;
+}
+@media (min-width: 1024px) {
+  .card-box .title .more-btn {
+    display: none;
+  }
+}
+.card-box .cont-area {
+  opacity: 0;
+  height: 0;
+  transition: all 0.3s;
+}
+.card-box .cont-area.on {
+  opacity: 1;
+  height: auto;
+  transition: all 0.3s;
+}
+@media (min-width: 1024px) {
+  .card-box .cont-area {
+    height: auto;
+    opacity: 1;
+  }
 }
 .card-box .cont {
   padding: 16px 0;
@@ -400,48 +422,31 @@ select:focus option:checked {
   letter-spacing: -0.28px;
   font-weight: 600;
 }
-.card-box.download .title-area {
+.card-box.download .title {
   position: relative;
+}
+.card-box.download .title .title-area {
   padding-left: 36px;
 }
-.card-box.download .title-area .main-title {
+.card-box.download .title .title-area .main-title {
   font-size: 22px;
   line-height: 100%;
   letter-spacing: -0.44px;
   font-weight: 700;
   color: #222;
 }
-.card-box.download .title-area:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-55%);
-  left: 0;
-  width: 28px;
-  height: 28px;
-  background-image: url("/assets/images/icon_download.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 @media (min-width: 768px) {
-  .card-box.download .title-area {
+  .card-box.download .title .title-area {
     display: flex;
     align-items: end;
     gap: 10px;
   }
 }
-.card-box.download .cont.download {
-  position: relative;
-  padding-left: 36px;
-}
-.card-box.download .cont.download:before {
-  content: "";
+.card-box.download .title .icon-download {
+  font-size: 0;
   display: block;
   position: absolute;
-  top: 50%;
-  transform: translateY(-55%);
+  top: 4px;
   left: 0;
   width: 28px;
   height: 28px;
@@ -450,12 +455,28 @@ select:focus option:checked {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.card-box.download .cont.download:after {
-  content: "";
+.card-box.download .cont.download {
+  position: relative;
+  padding-left: 36px;
+}
+.card-box.download .cont.download .icon-download {
+  font-size: 0;
   display: block;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 4px;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  background-image: url("/assets/images/icon_download.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card-box.download .cont.download .icon-viewer {
+  font-size: 0;
+  display: block;
+  position: absolute;
+  top: 4px;
   right: 0;
   width: 28px;
   height: 28px;
@@ -542,6 +563,61 @@ select:focus option:checked {
 }
 .input-wrap.error input[type=text] {
   border: 2px solid #FF0000;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .modal-content {
+  background: white;
+  padding: 35px 30px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+}
+.modal .close {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.modal canvas {
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+.modal .controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: -0.26px;
+  font-weight: 400;
+}
+.modal .controls button {
+  padding: 8px 12px;
+  border: none;
+  background: #004B55;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.modal .controls button:hover {
+  background: #008EA1;
 }
 
 .pc {

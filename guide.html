@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="assets/css/main.css">
   <style>
     body {
+      position: relative;
       padding: 50px;
       box-sizing: border-box;
     }
@@ -114,15 +115,18 @@
             <h5>pdf 다운로드</h5>
             <div class="card-box download">
               <div class="title">
+                <a class="icon-download" href="/assets/pdf/pdf_ex.pdf" download="sample.pdf">다운로드</a>
                 <div class="title-area">
                   <p class="main-title">Big-title</p>
                 <span class="sub-title">sub-title</span>
                 </div>
-                <a href="" class="more-btn mo">more</a>
+                <a href="#" class="more-btn mo">more</a>
               </div>
               <div class="cont-area">
                 <div class="cont download">
+                  <a class="icon-download" href="/assets/pdf/pdf_ex.pdf" download="sample.pdf">다운로드</a>
                   <p class="cont-title">cont-title</p>
+                  <a class="icon-viewer" data-url="http://127.0.0.1:5500/assets/pdf/pdf_ex.pdf">PDF보기</a>
                 </div>
                 <div class="cont">
                   <span class="sub-title">sub-title</span>
@@ -175,13 +179,31 @@
       </div>
     </div>
   </div>
+
   <footer>
     <div class="inner">
       <div class="logo">
-        <h1><a href="">한국표준협회</a></h1>
+        <!-- <h1><a href="">한국표준협회</a></h1> -->
       </div>
     </div>
   </footer>
+    <!-- 모달 팝업 -->
+<div id="pdf-modal" class="modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <canvas id="pdf-canvas"></canvas>
+      <div class="controls">
+          <button id="prev-page">이전</button>
+          <p><span id="page-num">1</span> / <span id="page-count"></span></p>
+          <button id="next-page">다음</button>
+          
+      </div>
+  </div>
+</div>
+  <script src="/assets/js/lib/jquery-2.2.4.min.js"></script>
+  <script src="/assets/js/lib/jquery-ui.js"></script>
+  <script src="/assets/js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
 </body>
 
 </html>
