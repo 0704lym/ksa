@@ -1,4 +1,4 @@
-
+$base-path: "/ksa";
 //font-face 설정
 @mixin fontFace($font-family, $font-weight, $font-style, $font-name) {
   @font-face {
@@ -6,8 +6,8 @@
     font-weight: #{$font-weight};
     font-style: #{$font-style};
 
-    src: url("/ksa/assets/font/#{$font-name}.woff") format("woff"),
-      url("/ksa/assets/font/#{$font-name}.ttf") format("truetype");
+    src: url("#{$base-path}/assets/font/#{$font-name}.woff") format("woff"),
+      url("#{$base-path}/assets/font/#{$font-name}.ttf") format("truetype");
     font-display: swap;
   }
 }
@@ -31,7 +31,7 @@
 @mixin bgImg($width, $height, $file, $bgsize: cover) {
   width: $width;
   height: $height;
-  background-image: url("/ksa/assets/images/#{$file}");
+  background-image: url("#{$base-path}/assets/images/#{$file}");
   background-position: center;
   background-repeat: no-repeat;
   background-size: $bgsize;
