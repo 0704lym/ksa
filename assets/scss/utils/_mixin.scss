@@ -6,8 +6,8 @@
     font-weight: #{$font-weight};
     font-style: #{$font-style};
 
-    src: url("./assets/font/#{$font-name}.woff") format("woff"),
-      url("./assets/font/#{$font-name}.ttf") format("truetype");
+    src: url("../assets/font/#{$font-name}.woff") format("woff"),
+      url("../assets/font/#{$font-name}.ttf") format("truetype");
     font-display: swap;
   }
 }
@@ -31,7 +31,7 @@
 @mixin bgImg($width, $height, $file, $bgsize: cover) {
   width: $width;
   height: $height;
-  background-image: url("./assets/images/#{$file}");
+  background-image: url("../assets/images/#{$file}");
   background-position: center;
   background-repeat: no-repeat;
   background-size: $bgsize;
