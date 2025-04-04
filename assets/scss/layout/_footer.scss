@@ -1,7 +1,63 @@
 @use '../variables/color' as *;
+@use '../utils/mixin' as *;
 
 footer {
     width: 100%;
-    height: 345px;
+    padding: 24px 20px;
     background-color: $black;
+
+    h1 {
+        width: 125px;
+        height: 19px;
+        margin-bottom: 30px;
+    }
+
+    p{
+        @include fontStyle(12px, 170%, 400);
+    color:$white;
+    }
+
+    .bottom {
+        margin-top: 30px;
+    }
+
+    @media (min-width:768px) {
+        padding: 45px 50px;
+        br{
+            display: none;
+        }
+        .bottom {
+            margin-top: 10px;
+        }
+    }
+
+    @media (min-width:1024px) {
+        .inner {
+            display: flex;
+            align-items: center;
+
+            h1{
+                width: 229px;
+                height: 34px;
+                margin-right: 100px;
+                a{
+                    width: 100%;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+
+            .top{
+                display: flex;
+                align-items: start;
+                gap: 100px;
+
+                .company-right {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
 }

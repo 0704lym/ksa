@@ -39,17 +39,19 @@ main {
       @media(min-width:1024px) {
         height: 344px;
         .visual-title {
+          width: 100%;
           top: 65px;
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
+        @include fontStyle(32px, 160%, 400);
         }
       }
     }
 
     &-content {
       background-color: #D7D7D7;
-      padding-bottom: 86px;
+      padding-bottom: 30px;
       .inner {
         position: relative;
         width: calc(100% - 40px);
@@ -59,13 +61,20 @@ main {
 
         @media (min-width:1024px) {
           top: -98px;
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          width: 86%;
         }
 
-      .button-box {
-        margin-top: 50px;
-      }
+    
 
    
+      }
+      .button-box.mo {
+        padding: 0 20px;
+        margin-top: 20px;
+        margin-bottom: 80px;
       }
     }
 
