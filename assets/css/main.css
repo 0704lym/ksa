@@ -776,9 +776,15 @@ select:focus option:checked {
   border-radius: 10px;
   text-align: center;
   position: relative;
-  width: 50%;
+  width: 90%;
   height: 80%;
   max-width: 800px;
+}
+@media (min-width: 768px) {
+  .popup.modal .modal-content {
+    width: 50%;
+    height: 80%;
+  }
 }
 .popup.modal .close {
   position: absolute;
@@ -788,10 +794,16 @@ select:focus option:checked {
   cursor: pointer;
 }
 .popup.modal canvas {
-  width: 55%;
+  width: 100%;
   height: 92%;
   border: 1px solid #ddd;
   margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .popup.modal canvas {
+    width: 55%;
+    height: 92%;
+  }
 }
 .popup.modal .controls {
   display: flex;
@@ -895,7 +907,7 @@ select:focus option:checked {
 .pc {
   display: none;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .pc {
     display: block;
   }
@@ -904,7 +916,7 @@ select:focus option:checked {
 .mo {
   display: block;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .mo {
     display: none;
   }
