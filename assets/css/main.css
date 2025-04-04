@@ -349,7 +349,7 @@ select:focus option:checked {
   flex-direction: column;
   justify-content: space-between;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .card-area {
     display: inline-flex;
     width: calc(100% - 388px);
@@ -840,13 +840,13 @@ main .sector-content .inner {
   margin: 0 auto;
   top: -36px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   main .sector-content .inner {
     top: -98px;
     display: flex;
     justify-content: center;
     gap: 20px;
-    width: 86%;
+    width: 100%;
   }
 }
 main .sector-content .button-box.mo {

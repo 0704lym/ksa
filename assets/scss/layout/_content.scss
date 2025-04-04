@@ -59,12 +59,12 @@ main {
         margin: 0 auto;
         top: -36px;
 
-        @media (min-width:1024px) {
+        @media (min-width:1200px) {
           top: -98px;
           display: flex;
           justify-content: center;
           gap: 20px;
-          width: 86%;
+          width: 100%;
         }
 
     
