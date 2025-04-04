@@ -8,6 +8,9 @@ body {
     @include fontFace("Pretendard", 600, "normal", "Pretendard-SemiBold");
     @include fontFace("Pretendard", 500, "normal", "Pretendard-Medium");
     @include fontFace("Pretendard", 400, "normal", "Pretendard-Regular");
+    @include fontFace("NanumMyeongjo", 700, "normal", "NanumMyeongjo-ExtraBold");
+    @include fontFace("NanumMyeongjo", 600, "normal", "NanumMyeongjo-Bold");
+    @include fontFace("NanumMyeongjo", 400, "normal", "NanumMyeongjo-Regular");
     margin: 0 auto ;
     overflow-x: hidden;
   }

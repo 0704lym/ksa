@@ -32,6 +32,27 @@ body {
   src: url("/assets/font/Pretendard-Regular.woff") format("woff"), url("/assets/font/Pretendard-Regular.ttf") format("truetype");
   font-display: swap;
 }
+@font-face {
+  font-family: NanumMyeongjo;
+  font-weight: 700;
+  font-style: normal;
+  src: url("/assets/font/NanumMyeongjo-ExtraBold.woff") format("woff"), url("/assets/font/NanumMyeongjo-ExtraBold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: NanumMyeongjo;
+  font-weight: 600;
+  font-style: normal;
+  src: url("/assets/font/NanumMyeongjo-Bold.woff") format("woff"), url("/assets/font/NanumMyeongjo-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: NanumMyeongjo;
+  font-weight: 400;
+  font-style: normal;
+  src: url("/assets/font/NanumMyeongjo-Regular.woff") format("woff"), url("/assets/font/NanumMyeongjo-Regular.ttf") format("truetype");
+  font-display: swap;
+}
 
 a {
   color: inherit;
@@ -414,7 +435,7 @@ select:focus option:checked {
     padding-bottom: 28px;
   }
 }
-@media (min-width: 1360px) {
+@media (min-width: 1600px) {
   .card-area .card-box .title .title-area {
     display: flex;
     align-items: end;
@@ -447,9 +468,11 @@ select:focus option:checked {
 .card-area .card-box .cont-area {
   opacity: 0;
   height: 0;
+  display: none;
   transition: all 0.3s;
 }
 .card-area .card-box .cont-area.on {
+  display: block;
   opacity: 1;
   height: auto;
   transition: all 0.3s;
@@ -472,6 +495,9 @@ select:focus option:checked {
 }
 .card-area .card-box .cont a {
   margin-top: 10px;
+}
+.card-area .card-box .cont-title {
+  width: 80%;
 }
 .card-area .card-box .cont .sub-title {
   display: inline-flex;
@@ -518,7 +544,7 @@ select:focus option:checked {
   font-weight: 700;
   color: #222;
 }
-@media (min-width: 768px) {
+@media (min-width: 1500px) {
   .card-area .card-box.download .title .title-area {
     display: flex;
     align-items: end;
@@ -529,7 +555,8 @@ select:focus option:checked {
   font-size: 0;
   display: block;
   position: absolute;
-  top: 0;
+  top: 50%;
+  transform: translateY(-16px);
   left: 0;
   width: 28px;
   height: 28px;
@@ -537,6 +564,12 @@ select:focus option:checked {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media (min-width: 1024px) {
+  .card-area .card-box.download .title .icon-download {
+    top: 50%;
+    transform: translateY(-28px);
+  }
 }
 .card-area .card-box.download .cont.download {
   position: relative;
@@ -546,7 +579,8 @@ select:focus option:checked {
   font-size: 0;
   display: block;
   position: absolute;
-  top: 4px;
+  top: 50%;
+  transform: translateY(-26px);
   left: 0;
   width: 28px;
   height: 28px;
@@ -554,6 +588,12 @@ select:focus option:checked {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media (min-width: 1024px) {
+  .card-area .card-box.download .cont.download .icon-download {
+    top: 50%;
+    transform: translateY(-24px);
+  }
 }
 .card-area .card-box.download .cont.download .icon-viewer {
   font-size: 0;
@@ -694,7 +734,7 @@ select:focus option:checked {
   font-size: 16px;
   line-height: 140%;
   letter-spacing: -0.32px;
-  font-weight: 700;
+  font-weight: 400;
 }
 .input-wrap input[type=text] {
   height: 74px;
@@ -717,7 +757,7 @@ select:focus option:checked {
   border: 2px solid #FF0000;
 }
 
-.modal {
+.popup {
   display: none;
   position: fixed;
   z-index: 1000;
@@ -729,28 +769,30 @@ select:focus option:checked {
   justify-content: center;
   align-items: center;
 }
-.modal .modal-content {
+.popup.modal .modal-content {
   background: white;
   padding: 35px 30px;
   border-radius: 10px;
   text-align: center;
   position: relative;
-  width: 80%;
+  width: 50%;
+  height: 80%;
   max-width: 800px;
 }
-.modal .close {
+.popup.modal .close {
   position: absolute;
   top: 5px;
   right: 20px;
   font-size: 25px;
   cursor: pointer;
 }
-.modal canvas {
-  width: 100%;
+.popup.modal canvas {
+  width: 55%;
+  height: 92%;
   border: 1px solid #ddd;
   margin-bottom: 10px;
 }
-.modal .controls {
+.popup.modal .controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -759,7 +801,7 @@ select:focus option:checked {
   letter-spacing: -0.26px;
   font-weight: 400;
 }
-.modal .controls button {
+.popup.modal .controls button {
   padding: 8px 12px;
   border: none;
   background: #004B55;
@@ -767,8 +809,86 @@ select:focus option:checked {
   cursor: pointer;
   border-radius: 5px;
 }
-.modal .controls button:hover {
+.popup.modal .controls button:hover {
   background: #008EA1;
+}
+@media (max-width: 1024px) {
+  .popup.agree {
+    display: none;
+  }
+}
+.popup.agree .modal-content {
+  background: white;
+  padding: 45px 30px 30px;
+  text-align: left;
+  position: relative;
+  width: 80%;
+  height: 80%;
+  max-width: 1080px;
+}
+.popup.agree .modal-content .close {
+  position: absolute;
+  display: inline-block;
+  top: 15px;
+  right: 20px;
+  width: 16px;
+  height: 16px;
+  background-image: url("/assets/images/icon-close.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+.popup.agree .modal-content .modal-cont {
+  height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE, Edge */
+}
+.popup.agree .modal-content .modal-cont .title {
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -0.36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.popup.agree .modal-content .modal-cont .sub-title {
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -0.32px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.popup.agree .modal-content .modal-cont .cont-item {
+  margin-bottom: 20px;
+}
+.popup.agree .modal-content .modal-cont .cont-item .item-title {
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -0.36px;
+  font-weight: 700;
+}
+.popup.agree .modal-content .modal-cont .cont-item .item-cont {
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -0.32px;
+  font-weight: 400;
+}
+.popup.agree .modal-content .modal-cont ::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+@media (min-width: 1024px) {
+  .popup.agree .modal-content {
+    padding: 80px 100px;
+  }
+  .popup.agree .modal-content .close {
+    width: 24px;
+    height: 24px;
+    background-image: url("/assets/images/icon-close.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .pc {
@@ -813,8 +933,19 @@ main .sector-visual .visual-title {
   font-weight: 700;
   color: white;
   text-align: left;
+  font-family: "NanumMyeongjo", "맑은고딕", Arial, sans-serif;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
+  main .sector-visual .visual-title {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -0.36px;
+    font-weight: 700;
+  }
+}
+@media (min-width: 1400px) {
   main .sector-visual {
     height: 344px;
   }
@@ -823,7 +954,6 @@ main .sector-visual .visual-title {
     top: 65px;
     left: 50%;
     transform: translateX(-50%);
-    text-align: center;
     font-size: 32px;
     line-height: 160%;
     letter-spacing: -0.64px;
@@ -846,7 +976,7 @@ main .sector-content .inner {
     display: flex;
     justify-content: center;
     gap: 20px;
-    width: 100%;
+    width: 99%;
   }
 }
 main .sector-content .button-box.mo {

@@ -52,7 +52,7 @@
       color: #d3d3d3;
     }
     + label {
-      @include fontStyle(16px, 140%, 700);
+      @include fontStyle(16px, 140%, 400);
     }
 
   }

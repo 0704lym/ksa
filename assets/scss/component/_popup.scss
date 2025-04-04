@@ -1,59 +1,121 @@
-@use '../variables/color' as *;
-@use '../utils/mixin' as *;
+@use "../variables/color" as *;
+@use "../utils/mixin" as *;
 
-.modal {
-  display: none; // 기본적으로 숨김
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  justify-content: center;
-  align-items: center;
+.popup {
+    display: none; // 기본적으로 숨김
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
 
-  .modal-content {
-      background: white;
-      padding: 35px 30px;
-      border-radius: 10px;
-      text-align: center;
-      position: relative;
-      width: 80%;
-      max-width: 800px;
-  }
+    &.modal {
+        .modal-content {
+            background: white;
+            padding: 35px 30px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            width: 50%;
+            height: 80%;
+            max-width: 800px;
+        }
 
-  .close {
-      position: absolute;
-      top: 5px;
-      right: 20px;
-      font-size: 25px;
-      cursor: pointer;
-  }
+        .close {
+            position: absolute;
+            top: 5px;
+            right: 20px;
+            font-size: 25px;
+            cursor: pointer;
+        }
 
-  canvas {
-      width: 100%;
-      border: 1px solid #ddd;
-      margin-bottom: 10px;
-  }
+        canvas {
+            width: 55%;
+            height: 92%;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
 
-  .controls {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      @include fontStyle(13px, 100% , 400);
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include fontStyle(13px, 100%, 400);
 
-      button {
-        padding: 8px 12px;
-        border: none;
-        background: $green;
-        color: white;
-        cursor: pointer;
-        border-radius: 5px;
+            button {
+                padding: 8px 12px;
+                border: none;
+                background: $green;
+                color: white;
+                cursor: pointer;
+                border-radius: 5px;
 
-        &:hover {
-            background: $green-hover;
+                &:hover {
+                    background: $green-hover;
+                }
+            }
         }
     }
-  }
+
+    &.agree {
+        @media (max-width: 1024px) {
+            display: none;
+        }
+        .modal-content {
+            background: white;
+            padding: 45px 30px 30px;
+            text-align: left;
+            position: relative;
+            width: 80%;
+            height: 80%;
+            max-width: 1080px;
+            .close {
+                position: absolute;
+                display: inline-block;
+                top: 15px;
+                right: 20px;
+                @include bgImg(16px, 16px, "icon-close.png");
+                cursor: pointer;
+            }
+            .modal-cont {
+                height: 100%;
+                overflow-y: scroll;
+                scrollbar-width: none; /* Firefox */
+                -ms-overflow-style: none; /* IE, Edge */
+                .title {
+                    @include fontStyle(18px, 100%, 700);
+                    margin-bottom: 20px;
+                }
+                .sub-title {
+                    @include fontStyle(16px, 140%, 400);
+                    margin-bottom: 20px;
+                }
+
+                .cont-item {
+                    margin-bottom: 20px;
+                    .item-title {
+                        @include fontStyle(18px, 100%, 700);
+                    }
+                    .item-cont {
+                        @include fontStyle(16px, 140%, 400);
+                    }
+                }
+                ::-webkit-scrollbar {
+                    display: none; /* Chrome, Safari, Opera */
+                }
+            }
+
+            @media (min-width: 1024px) {
+                padding: 80px 100px;
+
+                .close {
+                    @include bgImg(24px, 24px, "icon-close.png");
+                }
+            }
+        }
+    }
 }
