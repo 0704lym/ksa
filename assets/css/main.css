@@ -342,7 +342,7 @@ select:focus option:checked {
   display: block;
   width: 24px;
   height: 24px;
-  background-image: url("../assets/images/icon_consult.svg");
+  background-image: url("./assets/images/icon_consult.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -451,7 +451,7 @@ select:focus option:checked {
   transition: all 0.3s;
   width: 36px;
   height: 36px;
-  background-image: url("../assets/images/icon_arrow_bottom.svg");
+  background-image: url("./assets/images/icon_arrow_bottom.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -561,7 +561,7 @@ select:focus option:checked {
   left: 0;
   width: 28px;
   height: 28px;
-  background-image: url("../assets/images/icon_download.svg");
+  background-image: url("./assets/images/icon_download.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -585,7 +585,7 @@ select:focus option:checked {
   left: 0;
   width: 28px;
   height: 28px;
-  background-image: url("../assets/images/icon_download.svg");
+  background-image: url("./assets/images/icon_download.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -604,7 +604,7 @@ select:focus option:checked {
   right: 0;
   width: 28px;
   height: 28px;
-  background-image: url("../assets/images/icon_arrow_right.svg");
+  background-image: url("./assets/images/icon_arrow_right.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -632,7 +632,7 @@ select:focus option:checked {
   display: block;
   width: 24px;
   height: 24px;
-  background-image: url("../assets/images/icon_consult.svg");
+  background-image: url("./assets/images/icon_consult.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -698,7 +698,7 @@ select:focus option:checked {
   content: "";
   width: 16px;
   height: 16px;
-  background-image: url("../assets/images/icon_check_on.svg");
+  background-image: url("./assets/images/icon_check_on.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -834,7 +834,7 @@ select:focus option:checked {
   right: 20px;
   width: 16px;
   height: 16px;
-  background-image: url("../assets/images/icon-close.png");
+  background-image: url("./assets/images/icon-close.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -885,7 +885,7 @@ select:focus option:checked {
   .popup.agree .modal-content .close {
     width: 24px;
     height: 24px;
-    background-image: url("../assets/images/icon-close.png");
+    background-image: url("./assets/images/icon-close.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -919,7 +919,7 @@ main .sector-visual {
   height: 170px;
   width: 100%;
   height: 170px;
-  background-image: url("../assets/images/main_bg.png");
+  background-image: url("./assets/images/main_bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
