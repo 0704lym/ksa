@@ -545,7 +545,7 @@ select:focus option:checked {
   font-weight: 700;
   color: #222;
 }
-@media (min-width: 1500px) {
+@media (min-width: 1610px) {
   .card-area .card-box.download .title .title-area {
     display: flex;
     align-items: end;
