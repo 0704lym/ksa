@@ -2,6 +2,8 @@ $(function () {
   CardEvent();
   pdfViewer2();
   popupEvent();
+  emailjs.init("b8e8-w55_32iXg4e8"); 
+  EmailEvent();
 });
 
 function CardEvent() {
@@ -111,6 +113,60 @@ function pdfViewer2() {
         pageNum++;
         renderPage(pageNum);
       }
+    });
+  }
+
+  function EmailEvent(){
+    $('#submitBtn').on('click', function(e) {
+      e.preventDefault();
+  
+      let isValid = true;
+      let isChecked = $('#privacyCheck').is(':checked');
+      let emptyFields = [];
+  
+      $('.input-wrap').each(function() {
+        const input = $(this).find('input, textarea');
+        const value = input.val().trim();
+  
+        if (value === '') {
+          $(this).addClass('error');
+          emptyFields.push(input.attr('id'));
+          isValid = false;
+        } else {
+          $(this).removeClass('error');
+        }
+      });
+  
+      if (!isValid && !isChecked) {
+        alert('모든 내용을 입력해주고 체크박스를 체크해주세요');
+        return;
+      }
+  
+      if (!isValid) {
+        alert('모든 내용을 입력해주세요');
+        return;
+      }
+  
+      if (!isChecked) {
+        alert('체크박스를 눌러주세요');
+        return;
+      }
+  
+      // EmailJS 메일 전송
+      emailjs.send("service_s4zi8wf", "template_pljxgb8", {
+        company: $('#company').val(),
+        employee: $('#employeeCount').val(),
+        manager: $('#manager').val(),
+        contact: $('#contact').val(),
+        message: $('#message').val()
+      }).then(function(response) {
+        alert("문의가 정상적으로 전송되었습니다!");
+        $('input[type="text"], textarea').val('');
+        $('#privacyCheck').prop('checked', false);
+      }, function(error) {
+        alert("메일 전송에 실패했습니다. 다시 시도해주세요.");
+        console.error("EmailJS Error:", error);
+      });
     });
   }
   

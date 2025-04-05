@@ -273,51 +273,52 @@
           </div>
         </div>
         <div class="inquiry-box pc">
-          <div class="title">
-            교육/현장지도 기업상담문의
-          </div>
+          <div class="title">교육/현장지도 기업상담문의</div>
           <div class="input-box">
             <div class="input-wrap">
-              <input type="text" name="" id="text_1" placeholder="상호명을 입력해주세요">
-              <label for="text_1">상호명</label>
+              <input type="text" id="company" placeholder="상호명을 입력해주세요">
+              <label for="company">상호명</label>
             </div>
             <div class="input-wrap">
-              <input type="text" name="" id="text_1" placeholder="직원수를 입력해주세요">
-              <label for="text_1">직원수</label>
+              <input type="text" id="employeeCount" placeholder="직원수를 입력해주세요">
+              <label for="employeeCount">직원수</label>
             </div>
             <div class="input-wrap">
-              <input type="text" name="" id="text_1" placeholder="담당자를 입력해주세요">
-              <label for="text_1">담당자</label>
+              <input type="text" id="manager" placeholder="담당자를 입력해주세요">
+              <label for="manager">담당자</label>
             </div>
             <div class="input-wrap">
-              <input type="text" name="" id="text_1" placeholder="연락처를 입력해주세요">
-              <label for="text_1">연락처</label>
+              <input type="text" id="contact" placeholder="연락처를 입력해주세요">
+              <label for="contact">연락처</label>
             </div>
             <div class="input-wrap">
-              <textarea name="" id="" placeholder="문의사항을 입력해주세요"></textarea>
-              <label for="text_1">문의사항</label>
+              <textarea id="message" placeholder="문의사항을 입력해주세요"></textarea>
+              <label for="message">문의사항</label>
             </div>
+        
             <div class="agree-area">
               <div class="check-box">
-                <input type="checkbox" name="" id="check">
-                <label for="check">개인정보 취급방침</label>
+                <input type="checkbox" id="privacyCheck">
+                <label for="privacyCheck">개인정보 취급방침</label>
               </div>
               <div class="button-box">
                 <a href="#" class="btn agree-popup">자세히 보기</a>
               </div>
             </div>
+        
             <div class="button-box consult">
-              <a href="#" class="btn consult">
+              <a href="#" class="btn consult" id="submitBtn">
                 <span>문의하기</span>
               </a>
             </div>
           </div>
+        
           <div class="text-box">
             <span>전화 상담문의</span>
-            <p>
-              02-6240-5685</p>
+            <p>02-6240-5685</p>
           </div>
         </div>
+        
         <div class="card-area mo">
           <div class="card-box download mo">
             <div class="title">
@@ -755,6 +756,7 @@
   <script src="./assets/js/lib/jquery-ui.js"></script>
   <script src="./assets/js/index.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </body>
 
 </html>
