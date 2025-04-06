@@ -138,7 +138,7 @@ function pdfViewer2() {
       });
   
       if (!isValid && !isChecked) {
-        alert('모든 내용을 입력해주고 체크박스를 체크해주세요');
+        alert('모든 내용을 입력해주고 개인정보 취급방침에 동의해주세요');
         return;
       }
   
@@ -148,7 +148,7 @@ function pdfViewer2() {
       }
   
       if (!isChecked) {
-        alert('체크박스를 눌러주세요');
+        alert('개인정보 취급방침에 동의해주세요');
         return;
       }
   
