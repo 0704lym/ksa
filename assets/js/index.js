@@ -158,6 +158,7 @@ function pdfViewer2() {
         employee: $('#employeeCount').val(),
         manager: $('#manager').val(),
         contact: $('#contact').val(),
+        email: $('#email').val(),
         message: $('#message').val()
       }).then(function(response) {
         alert("문의가 정상적으로 전송되었습니다!");
